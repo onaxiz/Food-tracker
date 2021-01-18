@@ -62,15 +62,16 @@
               </form>
 
 
-              {% for food int results %}
+              {% for food in results %}
+              <div class="page-header"></div>
               <ul class="nav nav-pills" role="tablist">
-                <li class="active"><a>{{ food.name }}}</a></li>
+                <li class="active"><a>{{ food.name }}</a></li>
                 <li><a>Protein: <span class="badge">{{ food.protein }}</span></a></li>
                 <li><a>Carbohydrates: <span class="badge">{{ food.carbohydrates }}</span></a></li>
                 <li><a>Fat: <span class="badge">{{ food.fat }}</span></a></li>
                 <li><a>Calories: <span class="badge">{{ food.calories }}</span></a></li>
               </ul>
-              <div class="page-header"></div>
+
 
               {% endfor %}
 
