@@ -39,7 +39,7 @@ def index():
         db.execute('insert into log_date (entry_date) values (?)', [database_date])
         db.commit()
 
-    cur = db.execute('select entry_date from log_date')
+    cur = db.execute('select entry_date from log_date order by entry_date desc')
     results = cur.fetchall()
     pretty_results = []
 
@@ -50,8 +50,10 @@ def index():
         pretty_results.append(single_date)
     return render_template('home.html', results = pretty_results)
 
-@app.route('/view')
+@app.route('/view/<date>') #format date stored in db looks like 20210119
 def view():
+    db = get_db()
+
     return render_template('day.html')
 
 
