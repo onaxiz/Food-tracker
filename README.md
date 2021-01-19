@@ -2,4 +2,4 @@
 
 Calorie Calculator
 
-![scren of app](images/Screenshot_1 "how in looks")
+![scren of app](master/images/Screenshot_1.png)
